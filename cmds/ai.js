@@ -8,7 +8,7 @@ module.exports = {
     name: "ai",
     usedby: 0,
     dmUser: false,
-    dev: "Jonell Magallanes",
+    dev: "Marjhun Baylon",
     nickName: ["chatgpt", "gpt"],
     info: "EDUCATIONAL",
     onPrefix: false,
