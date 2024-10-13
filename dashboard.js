@@ -37,9 +37,9 @@ app.use(session({
 
 function getBotInfo() {
     return {
-        botName: adminConfig.botName || "MyBot",
+        botName: adminConfig.botName || "TOSHIA CHATBOT",
         prefix: adminConfig.prefix || "!",
-        ownerName: adminConfig.ownerName || "Jonell Magallanes",
+        ownerName: adminConfig.ownerName || "MARJHUN BAYLON",
         commandsCount: fs.readdirSync('./cmds').length,
         eventsCount: fs.readdirSync('./events').length,
         threadsCount: Object.keys(JSON.parse(fs.readFileSync('./database/threads.json', 'utf8') || "{}")).length,
