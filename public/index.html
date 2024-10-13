@@ -3,23 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bot Dashboard</title>
+    <title>𝐓𝐎𝐒𝐇𝐈𝐀 𝐂𝐇𝐀𝐓𝐁𝐎𝐓 𝐃𝐀𝐒𝐇𝐁𝐎𝐀𝐑𝐃</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #f0f8ff;
-            color: #333;
-            font-family: Arial, sans-serif;
-            position: relative;
+            background-color: #f8f4e3;
+            color: #4e3b31;
+            font-family: 'Georgia', serif;
             min-height: 100vh;
-            transition: background-color 1s ease, color 1s ease;
+            transition: background-color 0.5s, color 0.5s;
         }
         body.dark {
-            background-color: #333;
-            color: #f0f8ff;
+            background-color: #3b2a24;
+            color: #f8f4e3;
         }
         .container {
-            padding-bottom: 50px;
+            padding: 30px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .card {
+            border: 1px solid #c7b69d;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
         }
         .watermark {
             position: fixed;
@@ -28,76 +42,62 @@
             transform: translateX(-50%);
             opacity: 0.5;
             font-size: 12px;
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.9);
             padding: 5px 10px;
             border-radius: 5px;
         }
-        .card {
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: background-color 1s ease, color 1s ease;
-        }
-        .card.dark {
-            background-color: #444;
-            color: #f0f8ff;
-        }
-        .console-button {
-            margin-top: 20px;
-            background-color: #007bff;
-            color: white;
-        }
         .btn-lightblue {
-            background-color: #add8e6;
-            color: #333;
+            background-color: #d9b48b;
+            color: white;
+            transition: background-color 0.3s;
         }
         .btn-lightblue:hover {
-            background-color: #87cefa;
-        }
-        .response-time {
-            font-weight: bold;
+            background-color: #c69b75;
         }
         .toggle-btn {
             position: fixed;
-            top: 10px;
-            right: 10px;
+            top: 15px;
+            right: 15px;
             background-color: transparent;
             border: none;
             cursor: pointer;
             font-size: 24px;
-            transition: background-color 0.3s ease;
+            transition: transform 0.3s;
         }
         .toggle-btn:focus {
             outline: none;
+        }
+        .modal-header {
+            border-bottom: none;
         }
     </style>
 </head>
 <body>
     <div class="container mt-5">
         <h1 class="text-center">Bot Dashboard</h1>
-        <div class="card">
+        <div class="card mb-4">
             <div class="card-body">
                 <h5 class="card-title">Basic Bot Info</h5>
-                <p>Bot Name: <span id="botName"></span></p>
-                <p>Prefix: <span id="prefix"></span></p>
-                <p>Owner Name: <span id="ownerName"></span></p>
+                <p><strong>Bot Name:</strong> <span id="botName"></span></p>
+                <p><strong>Prefix:</strong> <span id="prefix"></span></p>
+                <p><strong>Owner Name:</strong> <span id="ownerName"></span></p>
             </div>
         </div>
-        <div class="card mt-3">
+        <div class="card mb-4">
             <div class="card-body">
                 <h5 class="card-title">Statistics</h5>
-                <p>Commands Count: <span id="commandsCount"></span></p>
-                <p>Events Count: <span id="eventsCount"></span></p>
-                <p>Threads Count: <span id="threadsCount"></span></p>
-                <p>Users Count: <span id="usersCount"></span></p>
+                <p><strong>Commands Count:</strong> <span id="commandsCount"></span></p>
+                <p><strong>Events Count:</strong> <span id="eventsCount"></span></p>
+                <p><strong>Threads Count:</strong> <span id="threadsCount"></span></p>
+                <p><strong>Users Count:</strong> <span id="usersCount"></span></p>
             </div>
         </div>
-        <div class="card mt-3">
+        <div class="card mb-4">
             <div class="card-body">
                 <h5 class="card-title">System Info</h5>
-                <p>Uptime: <span id="uptime"></span></p>
-                <p>OS: <span id="os"></span></p>
-                <p>Response Time: <span class="response-time" id="responseTime"></span></p>
+                <p><strong>Uptime:</strong> <span id="uptime"></span></p>
+                <p><strong>OS:</strong> <span id="os"></span></p>
+                <p><strong>Response Time:</strong> <span class="response-time" id="responseTime"></span></p>
             </div>
         </div>
         <div class="text-center">
@@ -105,7 +105,7 @@
             <button class="btn btn-lightblue" onclick="window.location.href='/console'">Open Console</button>
         </div>
     </div>
-    <div class="watermark" id="watermark">Bot Admin: Jonell Magallanes</div>
+    <div class="watermark" id="watermark">Bot Admin: Marjhun Baylon</div>
 
     <div class="modal fade" id="restartModal" tabindex="-1" role="dialog" aria-labelledby="restartModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -170,9 +170,6 @@
             const isDarkMode = document.body.classList.contains('dark');
             const emoji = isDarkMode ? "🌙" : "🌞";
             document.getElementById('toggleMode').innerHTML = emoji;
-            document.querySelectorAll('.card').forEach(card => {
-                card.classList.toggle('dark', isDarkMode);
-            });
         });
     </script>
 </body>
