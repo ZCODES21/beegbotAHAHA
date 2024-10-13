@@ -1,4 +1,4 @@
-const axios = require('axios');
+    const axios = require('axios');
 
 let apiState = {
     useBackupApi: false
@@ -16,7 +16,7 @@ module.exports = {
 
     onReply: async function ({ reply, api, event }) {
         const { threadID, senderID } = event;
-        const mainApiUrl = `https://jonellprojectccapisexplorer.onrender.com/api/gptconvo?ask=${encodeURIComponent(reply)}&id=${senderID}`;
+        const mainApiUrl = `https://ccprojectsjonellapis-production.up.railway.app/api/gptconvo?ask=${encodeURIComponent(reply)}&id=${senderID}`;
         const backupApiUrl = `https://gpt4o-hshs.onrender.com/gpt4o?ask=${encodeURIComponent(reply)}&id=${senderID}`;
         const apiUrl = apiState.useBackupApi ? backupApiUrl : mainApiUrl;
 
