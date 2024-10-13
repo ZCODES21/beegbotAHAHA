@@ -6,8 +6,8 @@ module.exports = {
     name: "help",
     usedby: 0,
     info: "display available commands",
-    dev: "Jonell Magallanes",
-    onPrefix: true,
+    dev: "Marjhun Baylon",
+    onPrefix: false,
     usages: "help",
     cooldowns: 10,
 
@@ -35,7 +35,7 @@ module.exports = {
             const startIndex = (page - 1) * commandsPerPage;
             const endIndex = Math.min(startIndex + commandsPerPage, visibleCommandFiles.length);
 
-            let helpMessage = `╭─『 Commands List 』\n`;
+            let helpMessage = `╭─『 𝐓𝐎𝐒𝐇𝐈𝐀 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒 』\n`;
             const displayedCommands = visibleCommandFiles.slice(startIndex, endIndex);
 
             displayedCommands.forEach(file => {
