@@ -4,8 +4,8 @@ const fs = require('fs-extra');
 module.exports = {
   name: "lyrics",
   usedby: 0,
-  onPrefix: true,
-  dev: "Jonell Magallanes",
+  onPrefix: false,
+  dev: "Marjhun Baylon",
   cooldowns: 2,
   dmUser: false,
 
