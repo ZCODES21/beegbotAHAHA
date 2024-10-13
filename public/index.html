@@ -11,11 +11,6 @@
             color: #4e3b31;
             font-family: 'Georgia', serif;
             min-height: 100vh;
-            transition: background-color 0.5s, color 0.5s;
-        }
-        body.dark {
-            background-color: #3b2a24;
-            color: #f8f4e3;
         }
         .container {
             padding: 30px;
@@ -30,10 +25,6 @@
             border: 1px solid #c7b69d;
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-5px);
         }
         .watermark {
             position: fixed;
@@ -53,19 +44,6 @@
         }
         .btn-lightblue:hover {
             background-color: #c69b75;
-        }
-        .toggle-btn {
-            position: fixed;
-            top: 15px;
-            right: 15px;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            font-size: 24px;
-            transition: transform 0.3s;
-        }
-        .toggle-btn:focus {
-            outline: none;
         }
         .modal-header {
             border-bottom: none;
@@ -128,8 +106,6 @@
         </div>
     </div>
 
-    <button class="toggle-btn" id="toggleMode">🌞</button>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -163,13 +139,6 @@
 
         socket.on('restartFailed', (message) => {
             alert(message);
-        });
-
-        document.getElementById('toggleMode').addEventListener('click', () => {
-            document.body.classList.toggle('dark');
-            const isDarkMode = document.body.classList.contains('dark');
-            const emoji = isDarkMode ? "🌙" : "🌞";
-            document.getElementById('toggleMode').innerHTML = emoji;
         });
     </script>
 </body>
