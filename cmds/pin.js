@@ -7,7 +7,7 @@ module.exports = {
     version: "1.0",
     usedby: 0,
     info: "Finding Image from Pinterest",
-    dev: "Jonell Magallanes",
+    dev: "Marjhun Baylon",
     onPrefix: false,
     usages: "[query]",
     cooldowns: 5,
