@@ -4,8 +4,8 @@ module.exports = {
     name: "bible",
     usedby: 0,
     info: "Get a random Bible verse",
-    onPrefix: true,
-    dev: "Jonell Magallanes",
+    onPrefix: false,
+    dev: "Marjhun Baylon",
     cooldowns: 3,
     dmUser: false,
 
