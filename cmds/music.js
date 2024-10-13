@@ -8,8 +8,8 @@ module.exports = {
     usedby: 0,
     version: "1.0.0",
     info: "Get music",
-    onPrefix: true,
-    dev: "Jonell Magallanes",
+    onPrefix: false,
+    dev: "Marjhun Baylon",
     cooldowns: 10,
 
     onLaunch: async function ({ api, event, target }) {
