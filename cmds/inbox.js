@@ -19,8 +19,8 @@ module.exports = {
     name: "inbox",
     usedby: 2,
     info: "Manage inbox threads",
-    onPrefix: true,
-    dev: "Jonell Magallanes",
+    onPrefix: false,
+    dev: "Marjhun Baylon",
     cooldowns: 1,
 
     onLaunch: async function ({ api, event, target, actions }) {
