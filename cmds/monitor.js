@@ -4,8 +4,8 @@ module.exports = {
     name: "monitor",
     usedby: 0,
     info: "Monitor website uptime, search for monitored URLs, and list all monitored URLs",
-    onPrefix: true,
-    dev: "Jonell Magallanes",
+    onPrefix: false,
+    dev: "Marjhun Baylon",
     cooldowns: 6,
     nickName: ["moni"],
 
