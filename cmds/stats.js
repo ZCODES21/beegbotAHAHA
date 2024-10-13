@@ -8,8 +8,8 @@ module.exports = {
   name: "stats",
   usedby: 0,
   info: "Showing The Status of Bot",
-  dev: "Jonell Magallanes",
-  onPrefix: true,
+  dev: "Marjhun Baylon",
+  onPrefix: false,
   cooldowns: 9,
 
   onLaunch: async function ({ actions }) {
