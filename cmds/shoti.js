@@ -8,7 +8,7 @@ module.exports = {
   name: "shoti",
   usedby: 0,
   info: "Random shoti video",
-  dev: "Jonell Magallanes",
+  dev: "Marjhun Baylon",
   onPrefix: false,
   cooldowns: 9,
 
