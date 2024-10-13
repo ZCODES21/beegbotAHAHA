@@ -1,25 +1,24 @@
 {
   "prefix": "!",
   "adminUIDs": [
-   "your uid"
+    "100047545013107"
   ],
   "moderatorUIDs": [
-    "your uid",
+    "100047545013107",
     "",
     ""
   ],
-  "botName": "bot name",
-  "ownerName": "Your name",
-  "facebookLink": "fb link",
+  "botName": "𝐓𝐎𝐒𝐇𝐈𝐀 𝐂𝐇𝐀𝐓𝐁𝐎𝐓",
+  "ownerName": "𝐌𝐀𝐑𝐉𝐇𝐔𝐍 𝐁𝐀𝐘𝐋𝐎𝐍",
+  "facebookLink": "https://www.facebook.com/marjhuncutieee",
   "resend": false,
   "notilogs": true,
   "appstate": "./appstate.json",
   "restart": true,
   "restartTime": 50,
-  "FCA": "hut-chat-api",
   "loginpanel": {
-    "user": "your username in dashboard",
-    "password": "password your dashboard",
-    "passcode": "12345"
+    "user": "zcode221",
+    "password": "zcode221",
+    "passcode": "212107"
   }
 }
