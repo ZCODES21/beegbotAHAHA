@@ -81,16 +81,15 @@
                 <p>Bot Name: <span id="botName"></span></p>
                 <p>Prefix: <span id="prefix"></span></p>
                 <p>Owner Name: <span id="ownerName"></span></p>
-                <p>FCA Module: <span class="FCA" id="FCA"></span></p>
             </div>
         </div>
         <div class="card mt-3">
             <div class="card-body">
                 <h5 class="card-title">Statistics</h5>
-                <p>Bot Commands: <span id="commandsCount"></span></p>
-                <p>Bot Events: <span id="eventsCount"></span></p>
-                <p>Threads: <span id="threadsCount"></span></p>
-                <p>Users: <span id="usersCount"></span></p>
+                <p>Commands Count: <span id="commandsCount"></span></p>
+                <p>Events Count: <span id="eventsCount"></span></p>
+                <p>Threads Count: <span id="threadsCount"></span></p>
+                <p>Users Count: <span id="usersCount"></span></p>
             </div>
         </div>
         <div class="card mt-3">
@@ -98,10 +97,7 @@
                 <h5 class="card-title">System Info</h5>
                 <p>Uptime: <span id="uptime"></span></p>
                 <p>OS: <span id="os"></span></p>
-                <p>System Latency: <span class="response-time" id="responseTime"></span></p>
-                <p>RAM: <span class="ram" id="ram"></span> Megabytes</p>
-                <p>CPU: <span class="cpu" id="cpu"></span>% Used</p>
-                <p>Host ID: <span class="host" id="host"></span></p>
+                <p>Response Time: <span class="response-time" id="responseTime"></span></p>
             </div>
         </div>
         <div class="text-center">
@@ -145,18 +141,12 @@
             document.getElementById('botName').innerText = data.botName;
             document.getElementById('prefix').innerText = data.prefix;
             document.getElementById('ownerName').innerText = data.ownerName;
-
-                        document.getElementById('os').innerText = data.os;
-        document.getElementById('commandsCount').innerText = data.commandsCount;
+            document.getElementById('commandsCount').innerText = data.commandsCount;
             document.getElementById('eventsCount').innerText = data.eventsCount;
             document.getElementById('threadsCount').innerText = data.threadsCount;
             document.getElementById('usersCount').innerText = data.usersCount;
-            document.getElementById('ram').innerText = data.ram;
-            document.getElementById('cpu').innerText = data.cpu;
-            document.getElementById('host').innerText = data.host;
-            document.getElementById('uptime').innerText = data.uptime;            
-
-            document.getElementById('FCA').innerText = data.FCA;
+            document.getElementById('uptime').innerText = data.uptime;
+            document.getElementById('os').innerText = data.os;
             document.getElementById('responseTime').innerText = data.responseTime;
             document.getElementById('watermark').innerText = `Bot Admin: ${data.ownerName}`;
         });
